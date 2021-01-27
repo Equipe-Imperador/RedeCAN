@@ -58,6 +58,30 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
+#define Trans1_Pin GPIO_PIN_0
+#define Trans1_GPIO_Port GPIOA
+#define Trans2_Pin GPIO_PIN_1
+#define Trans2_GPIO_Port GPIOA
+#define Bateria_Pin GPIO_PIN_2
+#define Bateria_GPIO_Port GPIOA
+#define CS_Pin GPIO_PIN_12
+#define CS_GPIO_Port GPIOB
+#define SCK_Pin GPIO_PIN_13
+#define SCK_GPIO_Port GPIOB
+#define SO_Pin GPIO_PIN_14
+#define SO_GPIO_Port GPIOB
+#define Serial_TX_Pin GPIO_PIN_9
+#define Serial_TX_GPIO_Port GPIOA
+#define Serial_RX_Pin GPIO_PIN_10
+#define Serial_RX_GPIO_Port GPIOA
+#define IgnitionPin_Pin GPIO_PIN_11
+#define IgnitionPin_GPIO_Port GPIOA
+#define Comb3_Pin GPIO_PIN_15
+#define Comb3_GPIO_Port GPIOA
+#define Comb2_Pin GPIO_PIN_3
+#define Comb2_GPIO_Port GPIOB
+#define Comb1_Pin GPIO_PIN_4
+#define Comb1_GPIO_Port GPIOB
 /* USER CODE BEGIN Private defines */
 
 /* USER CODE END Private defines */
