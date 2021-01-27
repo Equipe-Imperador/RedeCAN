@@ -39,6 +39,7 @@ Logo após abrir será requisitado um _Workspace_ para salvar os arquivo e depoi
 
 Clique em _**Start New STM32 project_**_ e abrirá a seguinte aba
 ![PartNumber](https://user-images.githubusercontent.com/65618285/106043257-e199c000-60bc-11eb-8e10-53264510c479.png)
+
 Em _**Part Number**_ escreva o modelo do seu STM32, no caso usaremos o **STM32F103C8** e clique em _**Next**_, em seguida coloque o nome do seu projeto e clique em _**Finish**_.
 
 **OBS:** Caso apareça uma opção perguntando se deseja usar _**Open Associated Perespective**_ selecione _**Yes**_.
