@@ -29,6 +29,7 @@ Após ter baixado o .ZIP extraia e execute o .EXE e clique em _**Next**_.
 ![STM EXE](https://user-images.githubusercontent.com/65618285/105994332-44239980-6086-11eb-8d02-2e4c1eefda47.png)
 
 Então será aberta uma aba para ler e aceitar mais uma licença, você deve aceitar para poder usar o software e depois será pedido o local de instalação dos arquivos. Em seguida surgirá a seguinte aba.
+
 ![Instalando STM](https://user-images.githubusercontent.com/65618285/106041945-33414b00-60bb-11eb-89a8-0beb5ba10b65.png)
 
 Clique em _**Intall**_ e está tudo pronto.
