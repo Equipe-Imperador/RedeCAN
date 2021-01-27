@@ -36,6 +36,7 @@ Clique em _**Intall**_ e está tudo pronto.
 ### Abrindo STMCubeIDE pela primeira vez
 Logo após abrir será requisitado um _Workspace_ para salvar os arquivo e depois clique em _**Launch**_.
 ![STMCubeIDE](https://user-images.githubusercontent.com/65618285/106042916-7223d080-60bc-11eb-835a-cdf948b820b2.png)
+
 Clique em _**Start New STM32 project_**_ e abrirá a seguinte aba
 ![PartNumber](https://user-images.githubusercontent.com/65618285/106043257-e199c000-60bc-11eb-8e10-53264510c479.png)
 Em _**Part Number**_ escreva o modelo do seu STM32, no caso usaremos o **STM32F103C8** e clique em _**Next**_, em seguida coloque o nome do seu projeto e clique em _**Finish**_.
