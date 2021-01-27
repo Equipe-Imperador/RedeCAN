@@ -25,4 +25,5 @@ Clique em _**Download**_ e espere a chegada do seguinte e-mail
 Clique em _**Download Now**_ e você será encaminhado para uma aba do site da STM e o download de um arquivo .ZIP será feito.
 ### 2.2 Executando o instalador
 Após ter baixado o .ZIP extraia e execute o .EXE e clique em _**Next**_
+
 ![STM EXE](https://user-images.githubusercontent.com/65618285/105994332-44239980-6086-11eb-8d02-2e4c1eefda47.png)
