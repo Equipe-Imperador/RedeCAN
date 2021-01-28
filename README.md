@@ -43,4 +43,34 @@ Clique em _**Start New STM32 project_**_ e abrirá a seguinte aba
 Em _**Part Number**_ escreva o modelo do seu STM32, no caso usaremos o **STM32F103C8** e clique em _**Next**_, em seguida coloque o nome do seu projeto e clique em _**Finish**_.
 
 **OBS:** Caso apareça uma opção perguntando se deseja usar _**Open Associated Perespective**_ selecione _**Yes**_.
-## 3.Configurando os pinos
+## 3.Configurando STMCubeIDE
+Depois de ter selecionado seu modelo de microcontrolador abrirá uma aba mostrando todos os pinos do seu STM. Utilize o diagrama de pinos a seguir para saber qual a entrada/saída mais adequada para o seu projeto.
+![Pinos STM32](https://user-images.githubusercontent.com/65618285/106167939-7f989380-616c-11eb-9bd2-06dd7e41d248.png)
+
+Após realizar toda a configuração de seus pinos clique em _**System Core**_ e vá em _**RCC**_
+
+![System Core](https://user-images.githubusercontent.com/65618285/106168306-e158fd80-616c-11eb-81e1-965219a45dc8.png)
+
+Nele mudaremos nosso _**High Speed Clock(HSE)**_ para _**Crystal/Ceramic Resonator**_, logo em seguida abra a _**Clock Configuration**_ e mude _**Input Frequency**_ para **16Mhz** e selecione o _**System Clock Mux**_ para o _**HSE**_.
+
+![Árvore de Clock](https://user-images.githubusercontent.com/65618285/106169976-bec7e400-616e-11eb-935c-2581443b51fd.png)
+
+Feito essas alterações iremos gerar nosso projeto, para isso clique em _**Project**_ e depois _**Generate Code**_.
+
+![Gerando projeto](https://user-images.githubusercontent.com/65618285/106169898-a8ba2380-616e-11eb-9e07-953654e853de.png)
+
+Agora que nosso código foi gerado pela IDE precisamos configurar mais duas opções para disponibilizar o uso de variáveis float na escrita e saída de dados. Abra novamente _**Projects**_ e depois _**Properties**_.
+
+![Propriedades](https://user-images.githubusercontent.com/65618285/106171001-d5bb0600-616f-11eb-9a41-7ff12b5a05f3.png)
+
+CLique em _**C/C++ Build**_ depois em _**Settings**_, _**MCU Settings**_ e marque as duas caixas da imagem.
+
+![Permitindo floats](https://user-images.githubusercontent.com/65618285/106171405-4104d800-6170-11eb-8188-e75395d90f46.png)
+
+Após isso, iremos em _**Build Steps**_ e colocaremos esse comando **arm-none-eabi-objcopy -0 ihex ${ProjName}.elf ${ProjName}.hex** em _**Post_build Steps, Command**_. Então só clicar em _**Apply and Close**_ que estará tudo configurado.
+
+![Comando](https://user-images.githubusercontent.com/65618285/106171825-ce482c80-6170-11eb-9661-3227f9623762.png)
+
+
+
+
