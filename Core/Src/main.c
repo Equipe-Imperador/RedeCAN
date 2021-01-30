@@ -188,9 +188,14 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOA_CLK_ENABLE();
   __HAL_RCC_GPIOB_CLK_ENABLE();
 
-  /*Configure GPIO pins : Trans1_Pin Trans2_Pin Bateria_Pin IgnitionPin_Pin
+  /*Configure GPIO pins : Trans1_Pin Trans2_Pin */
+  GPIO_InitStruct.Pin = Trans1_Pin|Trans2_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_ANALOG;
+  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+
+  /*Configure GPIO pins : Bateria_Pin Freio_Pin Vel_In_Pin IgnitionPin_Pin
                            Comb3_Pin */
-  GPIO_InitStruct.Pin = Trans1_Pin|Trans2_Pin|Bateria_Pin|IgnitionPin_Pin
+  GPIO_InitStruct.Pin = Bateria_Pin|Freio_Pin|Vel_In_Pin|IgnitionPin_Pin
                           |Comb3_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
   GPIO_InitStruct.Pull = GPIO_NOPULL;

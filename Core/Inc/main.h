@@ -64,6 +64,10 @@ void Error_Handler(void);
 #define Trans2_GPIO_Port GPIOA
 #define Bateria_Pin GPIO_PIN_2
 #define Bateria_GPIO_Port GPIOA
+#define Freio_Pin GPIO_PIN_6
+#define Freio_GPIO_Port GPIOA
+#define Vel_In_Pin GPIO_PIN_7
+#define Vel_In_GPIO_Port GPIOA
 #define CS_Pin GPIO_PIN_12
 #define CS_GPIO_Port GPIOB
 #define SCK_Pin GPIO_PIN_13
