@@ -1,49 +1,66 @@
-/* USER CODE BEGIN Header */
-/**
-  ******************************************************************************
-  * @file           : main.c
-  * @brief          : Main program body
-  ******************************************************************************
-  * @attention
-  *
-  * <h2><center>&copy; Copyright (c) 2021 STMicroelectronics.
-  * All rights reserved.</center></h2>
-  *
-  * This software component is licensed by ST under BSD 3-Clause license,
-  * the "License"; You may not use this file except in compliance with the
-  * License. You may obtain a copy of the License at:
-  *                        opensource.org/licenses/BSD-3-Clause
-  *
-  ******************************************************************************
-  */
-/* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 
 /* Private includes ----------------------------------------------------------*/
-/* USER CODE BEGIN Includes */
-
-/* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
-/* USER CODE BEGIN PTD */
-
-/* USER CODE END PTD */
-
+typedef enum {false, true} bool;
 /* Private define ------------------------------------------------------------*/
-/* USER CODE BEGIN PD */
-/* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
-/* USER CODE BEGIN PM */
-
-/* USER CODE END PM */
+/* USER CODE BEGIN PV */
+// Velocidade
+	#define PI 3.1416
+	#define DIAMETRO 0.51916 //Diametro efetivo da roda em metros
+	#define COMP_TOTAL (PI*DIAMETRO) // Comprimento da circunferência do sensor capacitivo
+	#define COMP_PARCIAL (PI*DIAMETRO/3) // Circuferência possui 3 gomos iguais, podemos dividir por 3
+/* USER CODE END PV */
 
 /* Private variables ---------------------------------------------------------*/
 CAN_HandleTypeDef hcan;
 
 /* USER CODE BEGIN PV */
+	// COMBUSTÍVEL
+		float desceLed; // Variável para descer os leds do painel
+		unsigned int ledComb; // Variável para leitura dos leds
+		float valorTotal; // Variável para calculo do tempo total
+		bool primeira = true; // Variável para o primeiro enchimento do tanque
+		int tempComp = 0, tempMais = 0, tempMenos = 0, tempComp2 = 0, tempComp3 = 0, tempComp4 = 0; // Variáveis para comparar tempo de consumo
+		bool flagCima = false, flagMedio = false, flagBaixo = false, flagMBaixo = false, flagCompTempo = false, flagCompTempo2 = false; // Variáveis para verificar nível de combutível
+		int flagDesceCima = 0, flagDesceMedio = 0, flagDesceBaixo = 0, flagDesceMBaixo = 0, flagSobe = 0, flagVariacao = 0; // Variáveis para confirmação da leitura do sensor
 
+	// FREIO
+		float valorTrans1 = 0.0, valorTrans2 = 0.0; //Variáveis para os transdutores de pressão
+		int transMinDia = 0, transMaxDia = 0; // Valor máximo e mínimo do transdutor dianteiro
+		int transMinTras = 0, transMaxTras = 0; // Valor máximo e mínimo do transdutor traseiro
+		int dadosTrans = 0;
+
+	// RPM
+		const unsigned int pulsesPerRev = 1;
+		unsigned long int lastPulseTime = 0; // Tenpo do ultimo pulso
+		unsigned long int RPM = 0;
+		unsigned long int tempoMomento = 0;
+		unsigned long int interval = 0;
+		unsigned int RPM_Led;
+		int flag_rpm = 0;
+
+	// SENSOR TEMPERATURA CVT
+		float tempCVT = 0;
+	falta max6675
+	//TELEMETRIA
+		int dadosComunicacao = 0;
+		char input[];
+		char Compa[];
+
+	// VARIÁVEIS DE COMPARAÇÃO
+		bool estadoVel = false, estadoRPM = false, estadoComb = false, estadoTemp = false, estadoBat = false, estadoFreio = false, estadoTrans = false, estadoTel = false;
+		int tempoCombCVT = 0;
+		int tempoBateria = 0;
+
+	// VELOCIDADE
+		int vel = 10; // Velocidade em Km/h
+		int vel1 = 0; // Velocidade em T instantes antes
+		int tempoVelRPM = 0;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
