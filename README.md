@@ -4,13 +4,14 @@ As instruções seguintes ajudam a como fazer uma programação do microcontrola
 1. Requisitos
 2. Instalação
 3. Configuração
-4. Código
+4. Exemplo CAN STM32 com Arduino
 ## 1.Requisitos
 * STM32F103C8
+* Arduino UNO
 * STMCubeIDE
-* Módulo CAN Bus
+* CAN Bus
     * MCP2551
-    * TJA1050
+    * TJA1050/MCP2515
 ## 2.Instalando STMCubeIDE
 ### 2.1 Baixando o instalador
 Para instalar o STMCubeIDE clique [aqui](https://www.st.com/content/st_com/en/products/development-tools/software-development-tools/stm32-software-development-tools/stm32-ides/stm32cubeide.html) e escolha qual das opçoes deseja instalar. No caso será instalado a versão 1.5.1 para Windows.
@@ -71,6 +72,10 @@ Após isso, iremos em _**Build Steps**_ e colocaremos esse comando **arm-none-ea
 
 ![Comando](https://user-images.githubusercontent.com/65618285/106171825-ce482c80-6170-11eb-9661-3227f9623762.png)
 
+## 4.Exemplo CAN STM32 com Arduino
+### 4.1 Conexão dos Fios
+### 4.2 Testando código pisca LED
+### 4.3 Desenvolvendo seu própio código
 
 
 
