@@ -74,6 +74,7 @@ Após isso, iremos em _**Build Steps**_ e colocaremos esse comando **arm-none-ea
 
 ## 4.Exemplo CAN STM32 com Arduino
 ### 4.1 Conexão dos Fios
+![CanFios](https://user-images.githubusercontent.com/65618285/111914371-661b1600-8a50-11eb-8fd1-f7201f022a19.jpg)
 ### 4.2 Testando código pisca LED
 ### 4.3 Desenvolvendo seu própio código
 
